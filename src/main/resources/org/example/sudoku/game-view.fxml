@@ -1,0 +1,9 @@
+<!-- game-view.fxml -->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="gridPane" xmlns:fx="http://javafx.com/fxml">
+    <!-- Add RowConstraints and ColumnConstraints here as needed -->
+</GridPane>
