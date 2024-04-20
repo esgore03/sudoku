@@ -1,6 +1,7 @@
 
 package org.example.sudoku.controller;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import org.example.sudoku.model.Player;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -9,21 +10,17 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class GameController implements Initializable {
+public class GameController{
     private Player player;
     @FXML
     private GridPane gridPane;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        // Generate Sudoku board dynamically
-        int size = 9; // 9x9 Sudoku board
+    public void initialize() {
+        int size = 9;
         for (int row = 0; row < size; row++) {
             for (int col = 0; col < size; col++) {
-                Label cell = new Label(); // You can use TextField as well
-                cell.getStyleClass().add("sudoku-cell");
-                // Add other styling or properties as needed
-                gridPane.add(cell, col, row);
+                TextField textField = new TextField();
+                gridPane.add(textField, col, row);
             }
         }
     }
