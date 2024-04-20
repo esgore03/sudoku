@@ -1,4 +1,4 @@
-package org.example.crapsgame.view;
+package org.example.sudoku.view;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,13 +12,13 @@ public class WelcomeStage extends Stage {
 
     public WelcomeStage () throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                "/org/example/crapsgame/welcome-view.fxml"));
+                "/org/example/sudoku/welcome-view.fxml"));
         Parent root = loader.load();
-        setTitle("Juego de Craps");
+        setTitle("Sudoku");
         Scene scene = new Scene(root);
         getIcons().add(
                 new Image(
-                String.valueOf(getClass().getResource("/org/example/crapsgame/images/favicon.png"))));
+                String.valueOf(getClass().getResource("/org/example/sudoku/images/favicon.png"))));
         setScene(scene);
         setResizable(false);
         show();

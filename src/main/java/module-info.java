@@ -1,9 +1,10 @@
-module org.example.crapsgame {
+module org.example.sudoku {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens org.example.crapsgame to javafx.fxml;
-    opens org.example.crapsgame.controller to javafx.fxml;
+    opens org.example.sudoku to javafx.fxml;
+    opens org.example.sudoku.controller to javafx.fxml;
 
-    exports org.example.crapsgame;
+    exports org.example.sudoku;
+    opens org.example.sudoku.model to javafx.fxml;
 }
