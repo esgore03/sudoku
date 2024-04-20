@@ -1,4 +1,4 @@
-package org.example.sudoku.model.player;
+package org.example.sudoku.model;
 
 public class Player {
     private int id;

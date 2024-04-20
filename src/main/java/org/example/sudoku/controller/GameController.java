@@ -1,10 +1,7 @@
 
 package org.example.sudoku.controller;
 import javafx.fxml.FXML;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import org.example.sudoku.model.player.Player;
+import org.example.sudoku.model.Player;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -30,7 +27,8 @@ public class GameController implements Initializable {
             }
         }
     }
+    public void setPlayer(Player player) {this.player = player;}
 }
 
 
-public void setPlayer(Player player) {this.player = player;}
+
