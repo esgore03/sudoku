@@ -1,9 +1,150 @@
-<!-- game-view.fxml -->
-<?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.sudoku.controller.GameController">
+    <center>
+        <GridPane fx:id="sudokuGridPane">
+        <GridPane style="-fx-border-color: black; -fx-border-width: 2px;">
 
-<GridPane fx:id="gridPane" xmlns:fx="http://javafx.com/fxml">
-    <!-- Add RowConstraints and ColumnConstraints here as needed -->
-</GridPane>
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="8" GridPane.rowIndex="0" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+
+
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+        <Rectangle fill="WHITE" stroke="BLACK" width="50" height="50" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+
+        </GridPane>
+    </GridPane>
+</center>
+        </BorderPane>
