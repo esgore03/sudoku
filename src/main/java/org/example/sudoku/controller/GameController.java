@@ -1,6 +1,7 @@
 
 package org.example.sudoku.controller;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import org.example.sudoku.model.Player;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -18,9 +19,6 @@ import javafx.scene.layout.Border;
 import javafx.geometry.Insets;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-
-
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
@@ -36,10 +34,8 @@ public class GameController implements Initializable {
     private Player player;
     @FXML
     private GridPane gridPane;
-
     @FXML
     private GridPane sudokuGridPane;
-
     private final int SIZE = 9;
     private final int BOX_SIZE = 3;
 
