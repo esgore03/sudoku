@@ -1,60 +1,36 @@
-
 package org.example.sudoku.controller;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import org.example.sudoku.model.Player;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.RowConstraints;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.BorderStrokeStyle;
-import javafx.scene.layout.BorderWidths;
-import javafx.scene.layout.Border;
-import javafx.geometry.Insets;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import org.example.sudoku.model.BoardNum;
+import org.example.sudoku.model.SudokuGame;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class GameController implements Initializable {
-    private Player player;
-    @FXML
-    private GridPane gridPane;
+public class GameController {
     @FXML
     private GridPane sudokuGridPane;
-    private final int SIZE = 9;
 
+    private SudokuGame sudokuGame = new SudokuGame();
+    private BoardNum[][] sudokuBoard = new BoardNum[9][9];
+
+    @FXML
+    public void initialize() {
+        createSudokuBoard();
+        sudokuGame.setSudokuBoard(sudokuBoard);
+    }
 
     private void createSudokuBoard() {
         for (int row = 0; row < 9; row++) {
-        for (int column = 0; column < 9; column++) {
-        TextField textField = new TextField();
-        textField.setText("");
-        gridPane.add(textField, column, row);
-        BoardNum boardNum = new BoardNum(textField, row, column);
-        sudokuBoard[row][column] = boardNum;
-    }
-}}
-
-
-    public void setPlayer(Player player) {
-        this.player = player;
+            for (int column = 0; column < 9; column++) {
+                TextField textField = new TextField();
+                textField.setText("");
+                textField.setId("textField_" + row + "_" + column);
+                sudokuGridPane.add(textField, column, row);
+                BoardNum boardNum = new BoardNum(textField, row, column);
+                sudokuBoard[row][column] = boardNum;
+            }
+        }
     }
 }
-
 
 

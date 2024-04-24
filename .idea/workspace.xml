@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="fb3a047f-e23d-4205-a13d-5baf28e6ebcb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" afterDir="false" />
+=======
+    <list default="true" id="fb3a047f-e23d-4205-a13d-5baf28e6ebcb" name="Changes" comment="Bug fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/BoardNum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/SudokuGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/Player.java" beforeDir="false" />
+>>>>>>> fc983fa2cdd5f3feb1dd89b306737b9fab08f6ba
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaFXApplication" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,7 +65,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;jmga&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Documents/Sudoku&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -77,6 +87,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example.crapsgame" />
       <recent name="org.example.crapsgame.model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.sudoku.model" />
     </key>
   </component>
   <component name="RunManager">
@@ -143,9 +156,13 @@
       <workItem from="1713634016084" duration="443000" />
       <workItem from="1713635314729" duration="284000" />
       <workItem from="1713635692401" duration="9178000" />
+<<<<<<< HEAD
       <workItem from="1713645195860" duration="735000" />
       <workItem from="1713731099974" duration="587000" />
       <workItem from="1713801875158" duration="1260000" />
+=======
+      <workItem from="1713648656697" duration="10147000" />
+>>>>>>> fc983fa2cdd5f3feb1dd89b306737b9fab08f6ba
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
