@@ -5,9 +5,12 @@ import javafx.scene.control.TextField;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class SudokuGame {
     private BoardNum[][] sudokuBoard = new BoardNum[9][9];
+
+
     public void setSudokuBoard(BoardNum[][] sudokuBoard){
         this.sudokuBoard = sudokuBoard;
     }
@@ -85,4 +88,25 @@ public class SudokuGame {
         }
         return true;
     }
+
+    public void generateInitialNumbers() {
+        Random random = new Random();
+        for (int i = 0; i < 20; i++) {
+            int row, column;
+            do {
+                row = random.nextInt(9); // Genera una fila aleatoria entre 0 y 8
+                column = random.nextInt(9); // Genera una columna aleatoria entre 0 y 8
+            } while (!sudokuBoard[row][column].getTextField().getText().isEmpty()); // Repite si la celda no está vacía
+
+            int number;
+            do {
+                number = random.nextInt(9) + 1; // Genera un número aleatorio entre 1 y 9
+                sudokuBoard[row][column].getTextField().setText(String.valueOf(number));
+            } while (!checkRow(sudokuBoard[row][column]) ||
+                    !checkColumn(sudokuBoard[row][column]) ||
+                    !checkSquare(sudokuBoard[row][column]));
+        }
+    }
+
+
 }

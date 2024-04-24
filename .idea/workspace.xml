@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb3a047f-e23d-4205-a13d-5baf28e6ebcb" name="Changes" comment="Bug fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/BoardNum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/SudokuGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/WelcomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/SudokuGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/SudokuGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +31,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -59,7 +49,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;jmga&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;jamh&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Documents/Sudoku&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -151,6 +141,7 @@
       <workItem from="1713635314729" duration="284000" />
       <workItem from="1713635692401" duration="9178000" />
       <workItem from="1713648656697" duration="10147000" />
+      <workItem from="1713995054204" duration="1290000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
