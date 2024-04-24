@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb3a047f-e23d-4205-a13d-5baf28e6ebcb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +144,8 @@
       <workItem from="1713635314729" duration="284000" />
       <workItem from="1713635692401" duration="9178000" />
       <workItem from="1713645195860" duration="735000" />
+      <workItem from="1713731099974" duration="587000" />
+      <workItem from="1713801875158" duration="1260000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />

@@ -37,13 +37,18 @@ public class GameController implements Initializable {
     @FXML
     private GridPane sudokuGridPane;
     private final int SIZE = 9;
-    private final int BOX_SIZE = 3;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
 
+    private void createSudokuBoard() {
+        for (int row = 0; row < 9; row++) {
+        for (int column = 0; column < 9; column++) {
+        TextField textField = new TextField();
+        textField.setText("");
+        gridPane.add(textField, column, row);
+        BoardNum boardNum = new BoardNum(textField, row, column);
+        sudokuBoard[row][column] = boardNum;
     }
-
+}}
 
 
     public void setPlayer(Player player) {
