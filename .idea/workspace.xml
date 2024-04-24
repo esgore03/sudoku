@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb3a047f-e23d-4205-a13d-5baf28e6ebcb" name="Changes" comment="Bug fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/BoardNum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/SudokuGame.java" afterDir="false" />
+    <list default="true" id="fb3a047f-e23d-4205-a13d-5baf28e6ebcb" name="Changes" comment="Lógica detrás de verificaciones.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/WelcomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/Player.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,9 +145,17 @@
       <workItem from="1713634016084" duration="443000" />
       <workItem from="1713635314729" duration="284000" />
       <workItem from="1713635692401" duration="9178000" />
-      <workItem from="1713648656697" duration="10147000" />
+      <workItem from="1713648656697" duration="10876000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lógica detrás de verificaciones.">
+      <option name="closed" value="true" />
+      <created>1713659578100</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713659578100</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +175,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
+    <MESSAGE value="Lógica detrás de verificaciones." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lógica detrás de verificaciones." />
   </component>
 </project>
