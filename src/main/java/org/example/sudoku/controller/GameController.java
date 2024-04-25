@@ -23,7 +23,9 @@ public class GameController{
     @FXML
     private GridPane board;
     private SudokuGame sudokuGame = new SudokuGame();
-    BoardNum[][] sudokuBoard = new BoardNum[9][9];
+    private BoardNum[][] sudokuBoard = new BoardNum[9][9];
+
+    @FXML
     public void initialize() {
         createSudokuBoard();
         sudokuGame.setSudokuBoard(sudokuBoard);
@@ -41,12 +43,12 @@ public class GameController{
                 GridPane.setValignment(textField, VPos.CENTER);
 
                 board.add(textField, column, row);
+
                 BoardNum boardNum = new BoardNum(textField, row, column);
                 sudokuBoard[row][column] = boardNum;
             }
         }
     }
-
     @FXML
     void onVerifyButtonClick(ActionEvent actionEvent) throws IOException{
     }
@@ -55,6 +57,5 @@ public class GameController{
     void onResolveButtonClick(ActionEvent actionEvent) throws IOException{
     }
 }
-
 
 
