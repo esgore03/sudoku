@@ -9,6 +9,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import org.example.sudoku.model.BoardNum;
 import org.example.sudoku.model.SudokuGame;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+
 
 import java.io.IOException;
 
@@ -48,6 +57,24 @@ public class GameController{
             }
         }
     }
+
+    private void openWinStage() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/sudoku/win-view.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setTitle("¡Felicidades!");
+        stage.show();
+    }
+
+    private void openLoseStage() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/sudoku/lose-view.fxml"));
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setTitle("¡Has perdido!");
+        stage.show();
+    }
     @FXML
     void onVerifyButtonClick(ActionEvent actionEvent) throws IOException{
         boolean result = sudokuGame.checkBoardNums();
@@ -55,6 +82,7 @@ public class GameController{
             if (result) {
                 resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: green;");
                 resultLabel.setText("¡Felicidades, tu respuesta es correcta!");
+                openWinStage();
                 for (int row = 0; row < 9; row++) {
                     for (int column = 0; column < 9; column++){
                         sudokuBoard[row][column].getTextField().setEditable(false);
@@ -63,6 +91,7 @@ public class GameController{
             } else {
                 resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: red;");
                 resultLabel.setText("Has cometido errores...");
+                openLoseStage();
                 for (int row = 0; row < 9; row++) {
                     for (int column = 0; column < 9; column++) {
                         sudokuBoard[row][column].getTextField().setEditable(false);
@@ -78,8 +107,6 @@ public class GameController{
 
     @FXML
     void onResolveButtonClick(ActionEvent actionEvent) throws IOException{
-        sudokuGame.resolve();
+        //sudokuGame.resolve();
     }
 }
-
-
