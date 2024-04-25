@@ -3,7 +3,9 @@ package org.example.sudoku;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import org.example.sudoku.view.GameStage;
-import org.example.sudoku.view.WelcomeStage;
+import org.example.sudoku.view.LoseStage;
+import org.example.sudoku.view.WinStage;
+
 
 import java.io.IOException;
 
