@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb3a047f-e23d-4205-a13d-5baf28e6ebcb" name="Changes" comment="Visual">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2024_10_22_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2024_10_22_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/BoardNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/BoardNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/SudokuGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/model/SudokuGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/view/GameStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/view/GameStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/view/LoseStage" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/view/LoseStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/view/WinStage" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/view/WinStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/view/alert/AlertBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/view/alert/IAlertBox.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/game-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,17 +35,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="jamh" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1

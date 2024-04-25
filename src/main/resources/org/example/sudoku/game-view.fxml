@@ -42,7 +42,7 @@
    <bottom>
       <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="57.0" prefWidth="569.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="VerifyButton" mnemonicParsing="false" onAction="#onVerifyButtonClick" prefHeight="35.0" prefWidth="156.0" style="-fx-background-color: black;" text="Verifcar respuesta" textFill="#ff5700">
+            <Button fx:id="verifyButton" mnemonicParsing="false" onAction="#onVerifyButtonClick" prefHeight="35.0" prefWidth="156.0" style="-fx-background-color: black;" text="Verifcar respuesta" textFill="#ff5700">
                <StackPane.margin>
                   <Insets left="390.0" />
                </StackPane.margin>
@@ -50,7 +50,7 @@
                   <Font name="Bodoni MT Black" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="ResolveButton" mnemonicParsing="false" onAction="#onResolveButtonClick" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: black;" text="Resolver sudoku" textFill="#faa700">
+            <Button fx:id="resolveButton" mnemonicParsing="false" onAction="#onResolveButtonClick" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: black;" text="Resolver sudoku" textFill="#faa700">
                <StackPane.margin>
                   <Insets left="70.0" />
                </StackPane.margin>
@@ -58,7 +58,7 @@
                   <Font name="Bodoni MT Black" size="14.0" />
                </font>
             </Button>
-            <Label fx:id="resultsLabel" alignment="CENTER" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: black;" textFill="WHITE">
+            <Label fx:id="resultLabel" alignment="CENTER" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: black;" textFill="WHITE">
                <StackPane.margin>
                   <Insets right="320.0" />
                </StackPane.margin>
