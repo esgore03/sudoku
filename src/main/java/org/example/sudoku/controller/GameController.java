@@ -53,6 +53,7 @@ public class GameController{
     @FXML
     void onVerifyButtonClick(ActionEvent actionEvent) throws IOException{
         boolean result = sudokuGame.checkBoardNums();
+        Stage stage = (Stage) resultLabel.getScene().getWindow();
         if(sudokuGame.checkTextFieldInputs()) {
             if (result) {
                 resultLabel.setStyle("-fx-font-size: 10px; -fx-text-fill: green;");
@@ -62,9 +63,15 @@ public class GameController{
                         sudokuBoard[row][column].getTextField().setEditable(false);
                     }
                 }
+                WinStage winStage = new WinStage();
+                winStage.show();
+                stage.close();
             } else {
                 resultLabel.setStyle("-fx-font-size: 10px; -fx-text-fill: red;");
                 resultLabel.setText("Has cometido errores...");
+                 LoseStage loseStage = new LoseStage();
+                LoseStage.show();
+                stage.close();
             }
         }
         else{
