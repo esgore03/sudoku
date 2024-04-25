@@ -2,9 +2,6 @@ package org.example.sudoku.model;
 
 import javafx.scene.control.TextField;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class BoardNum {
     private int row;
     private int column;
