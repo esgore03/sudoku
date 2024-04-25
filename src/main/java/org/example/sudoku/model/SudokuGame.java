@@ -9,7 +9,6 @@ import java.util.Random;
 
 public class SudokuGame {
     private BoardNum[][] sudokuBoard = new BoardNum[9][9];
-    private List<Integer> errors = new ArrayList<>();
     private List<String> validInputs = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9");
     public void setSudokuBoard(BoardNum[][] sudokuBoard){
         this.sudokuBoard = sudokuBoard;
@@ -67,11 +66,9 @@ public class SudokuGame {
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
                 if ((!validInputs.contains(sudokuBoard[row][column].getTextField().getText()))){
-                    errors.add(1);
                     return false;
                 }
                 if (sudokuBoard[row][column].getTextField().getText().length() > 1) {
-                    errors.add(2);
                     return false;
                 }
             }
@@ -83,7 +80,6 @@ public class SudokuGame {
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
                 if(!checkRow(sudokuBoard[row][column]) || !checkColumn(sudokuBoard[row][column]) || !checkSquare(sudokuBoard[row][column])){
-                    errors.add(3);
                     return false;
                 }
             }
@@ -124,16 +120,8 @@ public class SudokuGame {
         return true;
     }
 
-    public void setErrors(List<Integer> errors) {
-        this.errors = errors;
-    }
-
     public void setValidInputs(List<String> validInputs) {
         this.validInputs = validInputs;
-    }
-
-    public List<Integer> getErrors() {
-        return errors;
     }
 
     public BoardNum[][] getSudokuBoard() {

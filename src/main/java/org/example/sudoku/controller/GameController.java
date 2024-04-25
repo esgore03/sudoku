@@ -7,10 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import org.example.sudoku.model.BoardNum;
 import org.example.sudoku.model.SudokuGame;
 
@@ -57,27 +53,28 @@ public class GameController{
     @FXML
     void onVerifyButtonClick(ActionEvent actionEvent) throws IOException{
         boolean result = sudokuGame.checkBoardNums();
-        if (result){
-            if(sudokuGame.getErrors().isEmpty()){
+        if(sudokuGame.checkTextFieldInputs()) {
+            if (result) {
                 resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: green;");
                 resultLabel.setText("¡Felicidades, tu respuesta es correcta!");
-            }
-            else{
-                resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: red;");
-                String message = "Has fallado debido a los siguientes errores:";
-                for (int error : sudokuGame.getErrors()){
-                    if (error == 1){
-                        message += "    \ninputs inválidos.";
-                    }
-                    if (error == 2){
-                        message += "    \nceldas en blanco.";
-                    }
-                    if (error == 3){
-                        message += "    \nnúmeros incorrectos.";
+                for (int row = 0; row < 9; row++) {
+                    for (int column = 0; column < 9; column++){
+                        sudokuBoard[row][column].getTextField().setEditable(false);
                     }
                 }
-                resultLabel.setText((message));
+            } else {
+                resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: red;");
+                resultLabel.setText("Has cometido errores...");
+                for (int row = 0; row < 9; row++) {
+                    for (int column = 0; column < 9; column++) {
+                        sudokuBoard[row][column].getTextField().setEditable(false);
+                    }
+                }
             }
+        }
+        else{
+            resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: red;");
+            resultLabel.setText("Hay inputs inválidos en tu respuesta.");
         }
     }
 
