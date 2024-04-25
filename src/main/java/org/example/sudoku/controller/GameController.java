@@ -37,8 +37,8 @@ public class GameController{
                 TextField textField = new TextField();
 
                 textField.setText("");
-                textField.setMinSize(25,25);
-                textField.setMaxSize(25,25);
+                textField.setMinSize(30,30);
+                textField.setMaxSize(30,30);
                 textField.setStyle("-fx-alignment: center;");
                 GridPane.setHalignment(textField, HPos.CENTER);
                 GridPane.setValignment(textField, VPos.CENTER);
@@ -55,7 +55,7 @@ public class GameController{
         boolean result = sudokuGame.checkBoardNums();
         if(sudokuGame.checkTextFieldInputs()) {
             if (result) {
-                resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: green;");
+                resultLabel.setStyle("-fx-font-size: 10px; -fx-text-fill: green;");
                 resultLabel.setText("¡Felicidades, tu respuesta es correcta!");
                 for (int row = 0; row < 9; row++) {
                     for (int column = 0; column < 9; column++){
@@ -63,17 +63,12 @@ public class GameController{
                     }
                 }
             } else {
-                resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: red;");
+                resultLabel.setStyle("-fx-font-size: 10px; -fx-text-fill: red;");
                 resultLabel.setText("Has cometido errores...");
-                for (int row = 0; row < 9; row++) {
-                    for (int column = 0; column < 9; column++) {
-                        sudokuBoard[row][column].getTextField().setEditable(false);
-                    }
-                }
             }
         }
         else{
-            resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: red;");
+            resultLabel.setStyle("-fx-font-size: 10px; -fx-text-fill: red;");
             resultLabel.setText("Hay inputs inválidos en tu respuesta.");
         }
     }
