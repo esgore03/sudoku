@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb3a047f-e23d-4205-a13d-5baf28e6ebcb" name="Changes" comment="Visual">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/images/loseBackground.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/images/loseText.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/images/title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/images/winBackground.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/images/winText.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/game-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/lose-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/lose-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/win-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/win-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +151,8 @@
       <workItem from="1713635314729" duration="284000" />
       <workItem from="1713635692401" duration="9178000" />
       <workItem from="1713648656697" duration="10876000" />
+      <workItem from="1714016013447" duration="95000" />
+      <workItem from="1714016203746" duration="281000" />
     </task>
     <task id="LOCAL-00002" summary="Lógica detrás de verificaciones.">
       <option name="closed" value="true" />
