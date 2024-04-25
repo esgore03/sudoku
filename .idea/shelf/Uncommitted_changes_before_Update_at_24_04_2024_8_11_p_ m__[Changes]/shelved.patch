@@ -1,0 +1,200 @@
+Index: src/main/java/org/example/sudoku/controller/GameController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.sudoku.controller;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.geometry.HPos;\r\nimport javafx.geometry.VPos;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.layout.GridPane;\r\nimport javafx.scene.layout.Priority;\r\nimport javafx.scene.layout.StackPane;\r\nimport javafx.scene.paint.Color;\r\nimport javafx.scene.shape.Rectangle;\r\nimport org.example.sudoku.model.BoardNum;\r\nimport org.example.sudoku.model.SudokuGame;\r\n\r\nimport java.io.IOException;\r\n\r\npublic class GameController{\r\n    @FXML\r\n    private Button verifyButton;\r\n    @FXML\r\n    private Button resolveButton;\r\n    @FXML\r\n    private GridPane board;\r\n    private SudokuGame sudokuGame = new SudokuGame();\r\n    private BoardNum[][] sudokuBoard = new BoardNum[9][9];\r\n\r\n    @FXML\r\n    public void initialize() {\r\n        createSudokuBoard();\r\n        sudokuGame.setSudokuBoard(sudokuBoard);\r\n    }\r\n\r\n    private void createSudokuBoard() {\r\n        for (int row = 0; row < 9; row++) {\r\n            for (int column = 0; column < 9; column++) {\r\n                TextField textField = new TextField();\r\n\r\n                textField.setText(\"\");\r\n                textField.setMinSize(20,20);\r\n                textField.setMaxSize(20,20);\r\n                GridPane.setHalignment(textField, HPos.CENTER);\r\n                GridPane.setValignment(textField, VPos.CENTER);\r\n\r\n                board.add(textField, column, row);\r\n\r\n                BoardNum boardNum = new BoardNum(textField, row, column);\r\n                sudokuBoard[row][column] = boardNum;\r\n            }\r\n        }\r\n    }\r\n    @FXML\r\n    void onVerifyButtonClick(ActionEvent actionEvent) throws IOException{\r\n    }\r\n\r\n    @FXML\r\n    void onResolveButtonClick(ActionEvent actionEvent) throws IOException{\r\n    }\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/sudoku/controller/GameController.java b/src/main/java/org/example/sudoku/controller/GameController.java
+--- a/src/main/java/org/example/sudoku/controller/GameController.java	(revision 73dff0b00b3c771c76bf1525917909dc6a6457db)
++++ b/src/main/java/org/example/sudoku/controller/GameController.java	(date 1714006475936)
+@@ -1,27 +1,15 @@
+ package org.example.sudoku.controller;
+-import javafx.event.ActionEvent;
++
+ import javafx.fxml.FXML;
+-import javafx.geometry.HPos;
+-import javafx.geometry.VPos;
+-import javafx.scene.control.Button;
+ import javafx.scene.control.TextField;
+ import javafx.scene.layout.GridPane;
+-import javafx.scene.layout.Priority;
+-import javafx.scene.layout.StackPane;
+-import javafx.scene.paint.Color;
+-import javafx.scene.shape.Rectangle;
+ import org.example.sudoku.model.BoardNum;
+ import org.example.sudoku.model.SudokuGame;
+ 
+-import java.io.IOException;
+-
+-public class GameController{
++public class GameController {
+     @FXML
+-    private Button verifyButton;
+-    @FXML
+-    private Button resolveButton;
+-    @FXML
+-    private GridPane board;
++    private GridPane sudokuGridPane;
++
+     private SudokuGame sudokuGame = new SudokuGame();
+     private BoardNum[][] sudokuBoard = new BoardNum[9][9];
+ 
+@@ -35,27 +23,14 @@
+         for (int row = 0; row < 9; row++) {
+             for (int column = 0; column < 9; column++) {
+                 TextField textField = new TextField();
+-
+                 textField.setText("");
+-                textField.setMinSize(20,20);
+-                textField.setMaxSize(20,20);
+-                GridPane.setHalignment(textField, HPos.CENTER);
+-                GridPane.setValignment(textField, VPos.CENTER);
+-
+-                board.add(textField, column, row);
+-
++                textField.setId("textField_" + row + "_" + column);
++                sudokuGridPane.add(textField, column, row);
+                 BoardNum boardNum = new BoardNum(textField, row, column);
+                 sudokuBoard[row][column] = boardNum;
+             }
+         }
+     }
+-    @FXML
+-    void onVerifyButtonClick(ActionEvent actionEvent) throws IOException{
+-    }
+-
+-    @FXML
+-    void onResolveButtonClick(ActionEvent actionEvent) throws IOException{
+-    }
+ }
+ 
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"fb3a047f-e23d-4205-a13d-5baf28e6ebcb\" name=\"Changes\" comment=\"GameStage\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/example/sudoku/images/favicon.png\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"JavaFXApplication\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2d8aM5y3L5NflRXZVZJtadpYUjo\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"Application.Main.executor\": \"Run\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"jmga\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"A:/IntelliJProyectos/sudoku/src/main/resources/org/example/sudoku\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"preferences.lookFeel\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"org.example.crapsgame\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"A:\\IntelliJProyectos\\sudoku\\src\\main\\resources\\org\\example\\sudoku\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"A:\\IntelliJProyectos\\sudoku\\src\\main\\resources\\org\\example\\sudoku\\images\" />\r\n      <recent name=\"D:\\craps-game\\src\\main\\resources\\org\\example\\crapsgame\\images\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"org.example.crapsgame\" />\r\n      <recent name=\"org.example.crapsgame.model\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"org.example.sudoku.model\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <module name=\"craps-game\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <module name=\"craps-game\" />\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"fb3a047f-e23d-4205-a13d-5baf28e6ebcb\" name=\"Changes\" comment=\"\" />\r\n      <created>1709392110473</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1709392110473</updated>\r\n      <workItem from=\"1709392111518\" duration=\"3162000\" />\r\n      <workItem from=\"1709434079419\" duration=\"31000\" />\r\n      <workItem from=\"1709670817575\" duration=\"273000\" />\r\n      <workItem from=\"1709671102806\" duration=\"257000\" />\r\n      <workItem from=\"1709745898349\" duration=\"5223000\" />\r\n      <workItem from=\"1709782609141\" duration=\"15052000\" />\r\n      <workItem from=\"1709838891870\" duration=\"238000\" />\r\n      <workItem from=\"1709839247649\" duration=\"164000\" />\r\n      <workItem from=\"1709997633431\" duration=\"2301000\" />\r\n      <workItem from=\"1710358482181\" duration=\"2495000\" />\r\n      <workItem from=\"1710370928712\" duration=\"29000\" />\r\n      <workItem from=\"1710443657541\" duration=\"8817000\" />\r\n      <workItem from=\"1710458478503\" duration=\"300000\" />\r\n      <workItem from=\"1710894467522\" duration=\"5689000\" />\r\n      <workItem from=\"1710972735851\" duration=\"1738000\" />\r\n      <workItem from=\"1710975911927\" duration=\"1647000\" />\r\n      <workItem from=\"1710978265230\" duration=\"2905000\" />\r\n      <workItem from=\"1710981666861\" duration=\"1490000\" />\r\n      <workItem from=\"1711571596265\" duration=\"730000\" />\r\n      <workItem from=\"1711583863568\" duration=\"147000\" />\r\n      <workItem from=\"1711763778966\" duration=\"909000\" />\r\n      <workItem from=\"1711846343626\" duration=\"17000\" />\r\n      <workItem from=\"1711846375207\" duration=\"1882000\" />\r\n      <workItem from=\"1712189034574\" duration=\"1507000\" />\r\n      <workItem from=\"1713053635964\" duration=\"713000\" />\r\n      <workItem from=\"1713054562603\" duration=\"14000\" />\r\n      <workItem from=\"1713578867635\" duration=\"4623000\" />\r\n      <workItem from=\"1713584822720\" duration=\"719000\" />\r\n      <workItem from=\"1713629996329\" duration=\"266000\" />\r\n      <workItem from=\"1713630365415\" duration=\"22000\" />\r\n      <workItem from=\"1713631356471\" duration=\"809000\" />\r\n      <workItem from=\"1713634016084\" duration=\"443000\" />\r\n      <workItem from=\"1713635314729\" duration=\"284000\" />\r\n      <workItem from=\"1713635692401\" duration=\"9178000\" />\r\n      <workItem from=\"1713648656697\" duration=\"10876000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Lógica detrás de verificaciones.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713659578100</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713659578100</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"GameStage\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714003355430</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"Bug fix\" />\r\n    <MESSAGE value=\"Lógica detrás de verificaciones.\" />\r\n    <MESSAGE value=\"Main\" />\r\n    <MESSAGE value=\"GameStage\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"GameStage\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 73dff0b00b3c771c76bf1525917909dc6a6457db)
++++ b/.idea/workspace.xml	(date 1714007251433)
+@@ -5,7 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="fb3a047f-e23d-4205-a13d-5baf28e6ebcb" name="Changes" comment="GameStage">
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/images/favicon.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sudoku/controller/GameController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/sudoku/game-view.fxml" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -54,7 +56,7 @@
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "jmga",
++    "git-widget-placeholder": "main",
+     "kotlin-language-version-configured": "true",
+     "last_opened_file_path": "A:/IntelliJProyectos/sudoku/src/main/resources/org/example/sudoku",
+     "node.js.detected.package.eslint": "true",
+@@ -165,6 +167,7 @@
+       <option name="number" value="00003" />
+       <option name="presentableId" value="LOCAL-00003" />
+       <option name="project" value="LOCAL" />
++      <updated>1714003355430</updated>
+     </task>
+     <option name="localTasksCounter" value="4" />
+     <servers />
+Index: src/main/resources/org/example/sudoku/game-view.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.geometry.Insets?>\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.layout.BorderPane?>\r\n<?import javafx.scene.layout.ColumnConstraints?>\r\n<?import javafx.scene.layout.GridPane?>\r\n<?import javafx.scene.layout.RowConstraints?>\r\n<?import javafx.scene.layout.StackPane?>\r\n<?import javafx.scene.layout.VBox?>\r\n\r\n\r\n<BorderPane maxHeight=\"1.7976931348623157E308\" maxWidth=\"1.7976931348623157E308\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"725.0\" prefWidth=\"569.0\" xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"org.example.sudoku.controller.GameController\">\r\n   <center>\r\n      <GridPane fx:id=\"board\" alignment=\"CENTER\" gridLinesVisible=\"true\" maxHeight=\"1.7976931348623157E308\" maxWidth=\"1.7976931348623157E308\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"436.0\" prefWidth=\"552.0\" BorderPane.alignment=\"CENTER\">\r\n        <columnConstraints>\r\n          <ColumnConstraints hgrow=\"SOMETIMES\" maxWidth=\"1.7976931348623157E308\" minWidth=\"-Infinity\" prefWidth=\"50.0\" />\r\n            <ColumnConstraints hgrow=\"SOMETIMES\" maxWidth=\"1.7976931348623157E308\" minWidth=\"-Infinity\" prefWidth=\"50.0\" />\r\n            <ColumnConstraints hgrow=\"SOMETIMES\" maxWidth=\"1.7976931348623157E308\" minWidth=\"-Infinity\" prefWidth=\"50.0\" />\r\n            <ColumnConstraints hgrow=\"SOMETIMES\" maxWidth=\"1.7976931348623157E308\" minWidth=\"-Infinity\" prefWidth=\"50.0\" />\r\n            <ColumnConstraints hgrow=\"SOMETIMES\" maxWidth=\"1.7976931348623157E308\" minWidth=\"-Infinity\" prefWidth=\"50.0\" />\r\n            <ColumnConstraints hgrow=\"SOMETIMES\" maxWidth=\"1.7976931348623157E308\" minWidth=\"-Infinity\" prefWidth=\"50.0\" />\r\n            <ColumnConstraints hgrow=\"SOMETIMES\" maxWidth=\"1.7976931348623157E308\" minWidth=\"-Infinity\" prefWidth=\"50.0\" />\r\n            <ColumnConstraints hgrow=\"SOMETIMES\" maxWidth=\"1.7976931348623157E308\" minWidth=\"-Infinity\" prefWidth=\"50.0\" />\r\n          <ColumnConstraints hgrow=\"SOMETIMES\" maxWidth=\"1.7976931348623157E308\" minWidth=\"-Infinity\" prefWidth=\"50.0\" />\r\n        </columnConstraints>\r\n        <rowConstraints>\r\n          <RowConstraints maxHeight=\"1.7976931348623157E308\" minHeight=\"50.0\" prefHeight=\"50.0\" vgrow=\"SOMETIMES\" />\r\n          <RowConstraints maxHeight=\"1.7976931348623157E308\" minHeight=\"50.0\" prefHeight=\"50.0\" vgrow=\"SOMETIMES\" />\r\n          <RowConstraints maxHeight=\"1.7976931348623157E308\" minHeight=\"50.0\" prefHeight=\"50.0\" vgrow=\"SOMETIMES\" />\r\n            <RowConstraints maxHeight=\"1.7976931348623157E308\" minHeight=\"50.0\" prefHeight=\"50.0\" vgrow=\"SOMETIMES\" />\r\n            <RowConstraints maxHeight=\"1.7976931348623157E308\" minHeight=\"50.0\" prefHeight=\"50.0\" vgrow=\"SOMETIMES\" />\r\n            <RowConstraints maxHeight=\"1.7976931348623157E308\" minHeight=\"50.0\" prefHeight=\"50.0\" vgrow=\"SOMETIMES\" />\r\n            <RowConstraints maxHeight=\"1.7976931348623157E308\" minHeight=\"50.0\" prefHeight=\"50.0\" vgrow=\"SOMETIMES\" />\r\n            <RowConstraints maxHeight=\"1.7976931348623157E308\" minHeight=\"50.0\" prefHeight=\"50.0\" vgrow=\"SOMETIMES\" />\r\n            <RowConstraints maxHeight=\"1.7976931348623157E308\" minHeight=\"50.0\" prefHeight=\"50.0\" vgrow=\"SOMETIMES\" />\r\n        </rowConstraints>\r\n      </GridPane>\r\n   </center>\r\n   <bottom>\r\n      <StackPane maxHeight=\"1.7976931348623157E308\" maxWidth=\"1.7976931348623157E308\" prefHeight=\"139.0\" prefWidth=\"569.0\" BorderPane.alignment=\"CENTER\">\r\n         <children>\r\n            <VBox alignment=\"CENTER\" maxHeight=\"1.7976931348623157E308\" maxWidth=\"1.7976931348623157E308\" prefHeight=\"144.0\" prefWidth=\"569.0\">\r\n               <children>\r\n                  <Button fx:id=\"verifyButton\" mnemonicParsing=\"false\" onAction=\"#onVerifyButtonClick\" text=\"Verificar Respuesta\">\r\n                     <VBox.margin>\r\n                        <Insets bottom=\"10.0\" />\r\n                     </VBox.margin>\r\n                  </Button>\r\n                  <Button fx:id=\"resolveButton\" mnemonicParsing=\"false\" onAction=\"#onResolveButtonClick\" prefHeight=\"25.0\" prefWidth=\"118.0\" text=\"Resolver Sudoku\" />\r\n               </children>\r\n            </VBox>\r\n         </children>\r\n      </StackPane>\r\n   </bottom>\r\n</BorderPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/org/example/sudoku/game-view.fxml b/src/main/resources/org/example/sudoku/game-view.fxml
+--- a/src/main/resources/org/example/sudoku/game-view.fxml	(revision 73dff0b00b3c771c76bf1525917909dc6a6457db)
++++ b/src/main/resources/org/example/sudoku/game-view.fxml	(date 1714007454675)
+@@ -1,7 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+-<?import javafx.geometry.Insets?>
+-<?import javafx.scene.control.Button?>
+ <?import javafx.scene.layout.BorderPane?>
+ <?import javafx.scene.layout.ColumnConstraints?>
+ <?import javafx.scene.layout.GridPane?>
+@@ -9,48 +7,38 @@
+ <?import javafx.scene.layout.StackPane?>
+ <?import javafx.scene.layout.VBox?>
+ 
+-
+-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sudoku.controller.GameController">
++<BorderPane prefHeight="735.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sudoku.controller.GameController">
+    <center>
+-      <GridPane fx:id="board" alignment="CENTER" gridLinesVisible="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="552.0" BorderPane.alignment="CENTER">
++      <GridPane fx:id="sudokuGridPane" gridLinesVisible="true" prefHeight="585.0" prefWidth="713.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
+-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
+-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
+-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
+-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
+-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
+-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
+-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
+-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
++          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+-          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+-          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+-          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
++            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
++            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
++            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
++            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
++            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
++            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
++          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
++          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
++          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+       </GridPane>
+    </center>
+    <bottom>
+-      <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="139.0" prefWidth="569.0" BorderPane.alignment="CENTER">
++      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+          <children>
+-            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="144.0" prefWidth="569.0">
+-               <children>
+-                  <Button fx:id="verifyButton" mnemonicParsing="false" onAction="#onVerifyButtonClick" text="Verificar Respuesta">
+-                     <VBox.margin>
+-                        <Insets bottom="10.0" />
+-                     </VBox.margin>
+-                  </Button>
+-                  <Button fx:id="resolveButton" mnemonicParsing="false" onAction="#onResolveButtonClick" prefHeight="25.0" prefWidth="118.0" text="Resolver Sudoku" />
+-               </children>
+-            </VBox>
++            <VBox prefHeight="200.0" prefWidth="100.0" />
+          </children>
+       </StackPane>
+    </bottom>
+-</BorderPane>
++        </BorderPane>
