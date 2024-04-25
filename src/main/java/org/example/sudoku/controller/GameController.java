@@ -1,9 +1,12 @@
 package org.example.sudoku.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.HPos;
+import javafx.geometry.VPos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -30,17 +33,14 @@ public class GameController{
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
                 TextField textField = new TextField();
-                textField.setMinWidth(25);
-                textField.setMinHeight(25);
-                Rectangle rectangle = new Rectangle();
-                rectangle.setFill(Color.WHITE);
-                rectangle.setStroke(Color.BLACK);
-                rectangle.setWidth(50);
-                rectangle.setHeight(50);
-                StackPane stackPane = new StackPane();
-                stackPane.getChildren().addAll(rectangle, textField);
+
                 textField.setText("");
-                board.add(stackPane, column, row);
+                textField.setMinSize(20,20);
+                textField.setMaxSize(20,20);
+                GridPane.setHalignment(textField, HPos.CENTER);
+                GridPane.setValignment(textField, VPos.CENTER);
+
+                board.add(textField, column, row);
                 BoardNum boardNum = new BoardNum(textField, row, column);
                 sudokuBoard[row][column] = boardNum;
             }
