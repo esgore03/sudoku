@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
@@ -22,6 +23,8 @@ public class GameController{
     private Button resolveButton;
     @FXML
     private GridPane board;
+    @FXML
+    private Label resultLabel;
     private SudokuGame sudokuGame = new SudokuGame();
     private BoardNum[][] sudokuBoard = new BoardNum[9][9];
 
@@ -53,10 +56,34 @@ public class GameController{
     }
     @FXML
     void onVerifyButtonClick(ActionEvent actionEvent) throws IOException{
+        boolean result = sudokuGame.checkBoardNums();
+        if (result){
+            if(sudokuGame.getErrors().isEmpty()){
+                resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: green;");
+                resultLabel.setText("¡Felicidades, tu respuesta es correcta!");
+            }
+            else{
+                resultLabel.setStyle("-fx-font-size: 20px; -fx-text-fill: red;");
+                String message = "Has fallado debido a los siguientes errores:";
+                for (int error : sudokuGame.getErrors()){
+                    if (error == 1){
+                        message += "    \ninputs inválidos.";
+                    }
+                    if (error == 2){
+                        message += "    \nceldas en blanco.";
+                    }
+                    if (error == 3){
+                        message += "    \nnúmeros incorrectos.";
+                    }
+                }
+                resultLabel.setText((message));
+            }
+        }
     }
 
     @FXML
     void onResolveButtonClick(ActionEvent actionEvent) throws IOException{
+        sudokuGame.resolve();
     }
 }
 
