@@ -27,6 +27,7 @@ public class GameController{
     public void initialize() {
         createSudokuBoard();
         sudokuGame.setSudokuBoard(sudokuBoard);
+        sudokuGame.generateInitialNumbers();
     }
 
     private void createSudokuBoard() {
@@ -35,8 +36,9 @@ public class GameController{
                 TextField textField = new TextField();
 
                 textField.setText("");
-                textField.setMinSize(20,20);
-                textField.setMaxSize(20,20);
+                textField.setMinSize(25,25);
+                textField.setMaxSize(25,25);
+                textField.setStyle("-fx-alignment: center;");
                 GridPane.setHalignment(textField, HPos.CENTER);
                 GridPane.setValignment(textField, VPos.CENTER);
 

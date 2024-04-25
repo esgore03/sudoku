@@ -76,7 +76,7 @@ public class SudokuGame {
     public boolean checkRow(BoardNum boardNum){
         int row = boardNum.getRow();
         for (int column = 0; column < 9; column++){
-            if (boardNum.getTextField().getText().equals(sudokuBoard[row][column].getTextField().getText())){
+            if (sudokuBoard[row][column] != boardNum && boardNum.getTextField().getText().equals(sudokuBoard[row][column].getTextField().getText())){
                 return false;
             }
         }
@@ -85,7 +85,7 @@ public class SudokuGame {
     public boolean checkColumn(BoardNum boardNum){
         int column = boardNum.getColumn();
         for (int row = 0; row < 9; row++){
-            if (boardNum.getTextField().getText().equals(sudokuBoard[row][column].getTextField().getText())){
+            if (sudokuBoard[row][column] != boardNum && boardNum.getTextField().getText().equals(sudokuBoard[row][column].getTextField().getText())){
                 return false;
             }
         }
@@ -97,8 +97,8 @@ public class SudokuGame {
         int startingColumnSquare = boardNum.getColumn() - boardNum.getColumn() % 3;
 
         for (int row = startingRowSquare; row < startingRowSquare + 3; row++) {
-            for (int Column = startingColumnSquare; Column < startingColumnSquare + 3; Column++) {
-                if (sudokuBoard[row][Column].getTextField().getText().equals(boardNum.getTextField().getText())) {
+            for (int column = startingColumnSquare; column < startingColumnSquare + 3; column++) {
+                if (sudokuBoard[row][column] != boardNum && sudokuBoard[row][column].getTextField().getText().equals(boardNum.getTextField().getText())) {
                     return false;
                 }
             }
