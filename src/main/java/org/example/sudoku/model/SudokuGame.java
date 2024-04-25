@@ -1,11 +1,20 @@
+/**
+ * @author Jose Martínez - Jhorman Gómez - Esteban Gómez
+ * @version 1.0
+ */
 package org.example.sudoku.model;
+
+// Import necessary classes
 
 import javafx.scene.control.TextField;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Class representing the Sudoku game logic and matrix.
+ */
 public class SudokuGame {
     private BoardNum[][] sudokuBoard = new BoardNum[9][9];
     private String[][] boardAux = {
@@ -19,159 +28,171 @@ public class SudokuGame {
             {"2", "8", "7", "4", "1", "9", "6", "3", "5"},
             {"3", "4", "5", "2", "8", "6", "1", "7", "9"}
     };
-    private List<String> validInputs = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9");
+
+    /**
+     * Sets the Sudoku board.
+     *
+     * @param sudokuBoard The Sudoku board to set.
+     */
     public void setSudokuBoard(BoardNum[][] sudokuBoard){
         this.sudokuBoard = sudokuBoard;
     }
 
-    public boolean checkBoard(){
-        if(!checkTextFieldInputs() || !checkBoardNums()){
-            return false;
-        }
-
-        return true;
-    }
-
+    /**
+     * Resolves the Sudoku game by filling in all the numbers.
+     */
     public void resolve(){
         for (int row = 0; row < 9; row++){
             for (int column = 0; column < 9; column ++){
-                TextField textField = sudokuBoard[row][column].getTextField();
-                if (textField.getText().isEmpty()){
+                sudokuBoard[row][column].getTextField().setText(boardAux[row][column]);
+            }
+        }
+    }
+
+    /**
+     * Generates initial numbers for the Sudoku game.
+     */
+    public void generateInitialNumbers() {
+        // Logic to generate initial numbers for the Sudoku game
+        Random random = new Random();
+        List<String> positions = new ArrayList<>();
+        for (int num = 0; num < 4; num++) {
+            while (positions.size() < 4) {
+                int row = random.nextInt(3);
+                int column = random.nextInt(3);
+                String position = row + ", " + column;
+                if (!positions.contains((position))) {
+                    positions.add(position);
+                    TextField textField = sudokuBoard[row][column].getTextField();
                     textField.setText(boardAux[row][column]);
+                    textField.setEditable(false);
+                }
+            }
+        }
+        positions.clear();
+        for (int num = 0; num < 4; num++) {
+            while (positions.size() < 4) {
+                int row = random.nextInt(3);
+                int column = random.nextInt(3, 6);
+                String position = row + ", " + column;
+                if (!positions.contains((position))) {
+                    positions.add(position);
+                    TextField textField = sudokuBoard[row][column].getTextField();
+                    textField.setText(boardAux[row][column]);
+                    textField.setEditable(false);
+                }
+            }
+        }
+        positions.clear();
+        for (int num = 0; num < 4; num++) {
+            while (positions.size() < 4) {
+                int row = random.nextInt(3);
+                int column = random.nextInt(6, 9);
+                String position = row + ", " + column;
+                if (!positions.contains((position))) {
+                    positions.add(position);
+                    TextField textField = sudokuBoard[row][column].getTextField();
+                    textField.setText(boardAux[row][column]);
+                    textField.setEditable(false);
+                }
+            }
+        }
+        positions.clear();
+        for (int num = 0; num < 4; num++) {
+            while (positions.size() < 4) {
+                int row = random.nextInt(3, 6);
+                int column = random.nextInt(3);
+                String position = row + ", " + column;
+                if (!positions.contains((position))) {
+                    positions.add(position);
+                    TextField textField = sudokuBoard[row][column].getTextField();
+                    textField.setText(boardAux[row][column]);
+                    textField.setEditable(false);
+                }
+            }
+        }
+        positions.clear();
+        for (int num = 0; num < 4; num++) {
+            while (positions.size() < 4) {
+                int row = random.nextInt(3, 6);
+                int column = random.nextInt(3, 6);
+                String position = row + ", " + column;
+                if (!positions.contains((position))) {
+                    positions.add(position);
+                    TextField textField = sudokuBoard[row][column].getTextField();
+                    textField.setText(boardAux[row][column]);
+                    textField.setEditable(false);
+                }
+            }
+        }
+        positions.clear();
+        for (int num = 0; num < 4; num++) {
+            while (positions.size() < 4) {
+                int row = random.nextInt(3, 6);
+                int column = random.nextInt(6, 9);
+                String position = row + ", " + column;
+                if (!positions.contains((position))) {
+                    positions.add(position);
+                    TextField textField = sudokuBoard[row][column].getTextField();
+                    textField.setText(boardAux[row][column]);
+                    textField.setEditable(false);
+                }
+            }
+        }
+        positions.clear();
+        for (int num = 0; num < 4; num++) {
+            while (positions.size() < 4) {
+                int row = random.nextInt(6, 9);
+                int column = random.nextInt(3);
+                String position = row + ", " + column;
+                if (!positions.contains((position))) {
+                    positions.add(position);
+                    TextField textField = sudokuBoard[row][column].getTextField();
+                    textField.setText(boardAux[row][column]);
+                    textField.setEditable(false);
+                }
+            }
+        }
+        positions.clear();
+        for (int num = 0; num < 4; num++) {
+            while (positions.size() < 4) {
+                int row = random.nextInt(6, 9);
+                int column = random.nextInt(3, 6);
+                String position = row + ", " + column;
+                if (!positions.contains((position))) {
+                    positions.add(position);
+                    TextField textField = sudokuBoard[row][column].getTextField();
+                    textField.setText(boardAux[row][column]);
+                    textField.setEditable(false);
+                }
+            }
+        }
+        positions.clear();
+        for (int num = 0; num < 4; num++) {
+            while (positions.size() < 4) {
+                int row = random.nextInt(6, 9);
+                int column = random.nextInt(6, 9);
+                String position = row + ", " + column;
+                if (!positions.contains((position))) {
+                    positions.add(position);
+                    TextField textField = sudokuBoard[row][column].getTextField();
+                    textField.setText(boardAux[row][column]);
+                    textField.setEditable(false);
                 }
             }
         }
     }
 
-    public void generateInitialNumbers() {
-        // Cuadrante superior izquierdo
-        sudokuBoard[0][0].getTextField().setText("5");
-        sudokuBoard[0][0].getTextField().setEditable(false);
-
-        sudokuBoard[0][1].getTextField().setText("3");
-        sudokuBoard[0][1].getTextField().setEditable(false);
-
-        sudokuBoard[2][0].getTextField().setText("1");
-        sudokuBoard[2][0].getTextField().setEditable(false);
-
-        sudokuBoard[2][2].getTextField().setText("8");
-        sudokuBoard[2][2].getTextField().setEditable(false);
-
-        // Cuadrante superior central
-        sudokuBoard[0][3].getTextField().setText("6");
-        sudokuBoard[0][3].getTextField().setEditable(false);
-
-        sudokuBoard[1][5].getTextField().setText("5");
-        sudokuBoard[1][5].getTextField().setEditable(false);
-
-        sudokuBoard[2][3].getTextField().setText("3");
-        sudokuBoard[2][3].getTextField().setEditable(false);
-
-        sudokuBoard[1][4].getTextField().setText("9");
-        sudokuBoard[1][4].getTextField().setEditable(false);
-
-        // Cuadrante superior derecho
-        sudokuBoard[0][6].getTextField().setText("9");
-        sudokuBoard[0][6].getTextField().setEditable(false);
-
-        sudokuBoard[0][7].getTextField().setText("1");
-        sudokuBoard[0][7].getTextField().setEditable(false);
-
-        sudokuBoard[1][6].getTextField().setText("3");
-        sudokuBoard[1][6].getTextField().setEditable(false);
-
-        sudokuBoard[2][7].getTextField().setText("6");
-        sudokuBoard[2][7].getTextField().setEditable(false);
-
-        // Cuadrante central izquierdo
-        sudokuBoard[3][0].getTextField().setText("8");
-        sudokuBoard[3][0].getTextField().setEditable(false);
-
-        sudokuBoard[3][1].getTextField().setText("5");
-        sudokuBoard[3][1].getTextField().setEditable(false);
-
-        sudokuBoard[5][0].getTextField().setText("7");
-        sudokuBoard[5][0].getTextField().setEditable(false);
-
-        sudokuBoard[4][1].getTextField().setText("2");
-        sudokuBoard[4][1].getTextField().setEditable(false);
-
-
-        // Cuadrante central
-        sudokuBoard[3][3].getTextField().setText("7");
-        sudokuBoard[3][3].getTextField().setEditable(false);
-
-        sudokuBoard[3][4].getTextField().setText("6");
-        sudokuBoard[3][4].getTextField().setEditable(false);
-
-        sudokuBoard[4][3].getTextField().setText("8");
-        sudokuBoard[4][3].getTextField().setEditable(false);
-
-        sudokuBoard[4][4].getTextField().setText("5");
-        sudokuBoard[4][4].getTextField().setEditable(false);
-
-
-        // Cuadrante central derecho
-        sudokuBoard[3][6].getTextField().setText("4");
-        sudokuBoard[3][6].getTextField().setEditable(false);
-
-        sudokuBoard[3][8].getTextField().setText("3");
-        sudokuBoard[3][8].getTextField().setEditable(false);
-
-        sudokuBoard[4][6].getTextField().setText("7");
-        sudokuBoard[4][6].getTextField().setEditable(false);
-
-        sudokuBoard[4][7].getTextField().setText("9");
-        sudokuBoard[4][7].getTextField().setEditable(false);
-
-
-        // Cuadrante inferior izquierdo
-        sudokuBoard[6][0].getTextField().setText("9");
-        sudokuBoard[6][0].getTextField().setEditable(false);
-
-        sudokuBoard[6][1].getTextField().setText("6");
-        sudokuBoard[6][1].getTextField().setEditable(false);
-
-        sudokuBoard[8][0].getTextField().setText("3");
-        sudokuBoard[8][0].getTextField().setEditable(false);
-
-        sudokuBoard[7][1].getTextField().setText("8");
-        sudokuBoard[7][1].getTextField().setEditable(false);
-
-
-        // Cuadrante inferior central
-        sudokuBoard[8][5].getTextField().setText("6");
-        sudokuBoard[8][5].getTextField().setEditable(false);
-
-        sudokuBoard[6][4].getTextField().setText("3");
-        sudokuBoard[6][4].getTextField().setEditable(false);
-
-        sudokuBoard[7][3].getTextField().setText("4");
-        sudokuBoard[7][3].getTextField().setEditable(false);
-
-        sudokuBoard[7][4].getTextField().setText("1");
-        sudokuBoard[7][4].getTextField().setEditable(false);
-
-
-        // Cuadrante inferior derecho
-        sudokuBoard[6][6].getTextField().setText("2");
-        sudokuBoard[6][6].getTextField().setEditable(false);
-
-        sudokuBoard[8][7].getTextField().setText("7");
-        sudokuBoard[8][7].getTextField().setEditable(false);
-
-        sudokuBoard[7][6].getTextField().setText("6");
-        sudokuBoard[7][6].getTextField().setEditable(false);
-
-        sudokuBoard[7][7].getTextField().setText("3");
-        sudokuBoard[7][7].getTextField().setEditable(false);
-
-    }
-
+    /**
+     * Checks if all text fields in the Sudoku board contain valid inputs.
+     *
+     * @return True if all text fields contain valid inputs, false otherwise.
+     */
     public boolean checkTextFieldInputs(){
+        // Logic to check if all text fields contain valid inputs
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
-                if ((!validInputs.contains(sudokuBoard[row][column].getTextField().getText()))){
+                if (sudokuBoard[row][column].getTextField().getText().isEmpty()){
                     return false;
                 }
                 if (sudokuBoard[row][column].getTextField().getText().length() > 1) {
@@ -182,7 +203,13 @@ public class SudokuGame {
         return true;
     }
 
+    /**
+     * Checks if the Sudoku board numbers are correct according to the rules of Sudoku.
+     *
+     * @return True if the Sudoku board numbers are correct, false otherwise.
+     */
     public boolean checkBoardNums(){
+        // Logic to check if the Sudoku board numbers are correct
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
                 if(!checkRow(sudokuBoard[row][column]) || !checkColumn(sudokuBoard[row][column]) || !checkSquare(sudokuBoard[row][column])){
@@ -193,6 +220,12 @@ public class SudokuGame {
         return true;
     }
 
+    /**
+     * Checks if a BoardNum object's value is unique within its row.
+     *
+     * @param boardNum The BoardNum object to check.
+     * @return True if the value is unique within its row, false otherwise.
+     */
     public boolean checkRow(BoardNum boardNum){
         int row = boardNum.getRow();
         for (int column = 0; column < 9; column++){
@@ -202,6 +235,13 @@ public class SudokuGame {
         }
         return true;
     }
+
+    /**
+     * Checks if a BoardNum object's value is unique within its column.
+     *
+     * @param boardNum The BoardNum object to check.
+     * @return True if the value is unique within its column, false otherwise.
+     */
     public boolean checkColumn(BoardNum boardNum){
         int column = boardNum.getColumn();
         for (int row = 0; row < 9; row++){
@@ -212,6 +252,12 @@ public class SudokuGame {
         return true;
     }
 
+    /**
+     * Checks if a BoardNum object's value is unique within its square.
+     *
+     * @param boardNum The BoardNum object to check.
+     * @return True if the value is unique within its square, false otherwise.
+     */
     public boolean checkSquare(BoardNum boardNum){
         int startingRowSquare = boardNum.getRow() - boardNum.getRow() % 3;
         int startingColumnSquare = boardNum.getColumn() - boardNum.getColumn() % 3;
@@ -226,15 +272,12 @@ public class SudokuGame {
         return true;
     }
 
-    public void setValidInputs(List<String> validInputs) {
-        this.validInputs = validInputs;
-    }
-
+    /**
+     * Gets the Sudoku board.
+     *
+     * @return The Sudoku board.
+     */
     public BoardNum[][] getSudokuBoard() {
         return sudokuBoard;
-    }
-
-    public List<String> getValidInputs() {
-        return validInputs;
     }
 }
