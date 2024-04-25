@@ -45,8 +45,8 @@ public class GameController{
                 TextField textField = new TextField();
 
                 textField.setText("");
-                textField.setMinSize(20,20);
-                textField.setMaxSize(20,20);
+                textField.setMinSize(30,30);
+                textField.setMaxSize(30,30);
                 GridPane.setHalignment(textField, HPos.CENTER);
                 GridPane.setValignment(textField, VPos.CENTER);
 
